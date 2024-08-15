@@ -1,0 +1,37 @@
+/* Landing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+   .values {
+    background-image: url('../images/new_background.jpeg');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0); 
+    background-blend-mode: lighten;
+    color: #000000;
+  }
+
+  /* semi transparent floating boxes to hold the text */
+    .values .container {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #group_article div.bibbase_group i+span { display: none; }
+          #group_inproceedings div.bibbase_group i+span { display: none; }
+          #group_mastersthesis div.bibbase_group i+span { display: none; }
+          #group_phdthesis div.bibbase_group i+span { display: none; }
+          #group_techreport div.bibbase_group i+span { display: none; }
+          #group_unpublished div.bibbase_group i+span { display: none; }
+          #group_incollection div.bibbase_group i+span { display: none; }
+          #group_misc div.bibbase_group i+span { display: none; }
+
+          #group_article div.bibbase_group i:after { content: " Journal Articles" }
+          #group_inproceedings div.bibbase_group i:after { content: " Conference and Workshop Publications" }
+          #group_mastersthesis div.bibbase_group i:after { content: " Master's Thesis" }
+          #group_phdthesis div.bibbase_group i:after { content: " PhD Thesis" }
+          #group_techreport div.bibbase_group i:after { content: " Technical Report" }
+          #group_unpublished div.bibbase_group i:after { content: " Unpublished" }
+          #group_incollection div.bibbase_group i:after { content: " Book Chapters" }
+          #group_misc div.bibbase_group i:after { content: " Preprints" }
+
+/* Map */
+    #map { height: 500px; }
