@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Josephine Roper</title>
+    <meta name="Personal website" content="">
+    <meta name="Josephine Roper" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/simple.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body class="section values">
+
+    <!-- Primary Page Layout -->
+
+    <div class="container" style="margin-top: 5%">
+        <h4>THERE - Travel from Home to Everywhere Required Everyday</h4>
+        <p>
+            THERE is an access index, which has been described in <a href="https://doi.org/10.1016/j.tra.2024.104133" target="">an academic paper</a> and in my PhD thesis. This page provides a shorter explanation.
+            
+            The index is based on the ease of travel to nearby destinations. The index is normalised to a scale of 0 to 100, with 100 being the most accessible.
+        </p><p>
+            This table outlines how the index is implemented in the above paper, versus how it could potentially be implemented in other contexs.
+            <table>
+                <tr>
+                    <th>THERE framework aspects</th>
+                    <th>WalkTHERE as calculated for the paper and for Colouring Australia</th>
+                    <th>Other possible implementations of THERE</th>
+                </tr>
+                <tr>
+                    <td>Mode of travel</td>
+                    <td>Walking</td>
+                    <td>Any mode or a combination</td>
+                </tr>
+                <tr>
+                    <td>Generalised cost of travel</td>
+                    <td>Distance on a walkable network (where 'walkable' is anywhere walking is not prohibited, without evaluation of quality)</td>
+                    <td>Could be based on any combination of time, monetary cost, reliability, exertion, pleasantness, etc <a id="footnote-1-ref" href="#footnote-1" title="link to footnote">[1]</a></td>
+                </tr>
+                <tr>
+                    <td>Destinations</td>
+                    <td>Five categories of destinations are included and weighted based on data collected by the Sydney Household Travel Survey: employment, education, shopping, errands, recreation.</td>
+                    <td>Any set of destination categories could be used. Different sets could be used for different potential walkers, such as a child-relevant set <a id="footnote-2-ref" href="#footnote-2" title="link to footnote">[2]</a>.</td>
+                </tr>
+                <tr>
+                    <td>Results</td>
+                    <td>A single score is given that seeks to show the 'average' experience of walkability from a point.</td>
+                    <td>Separate scores could be given for different users based on differing destination needs and different generalised costs - eg different travel speeds or preferences.</td>
+                
+            </table>
+        </p>
+
+        <h4>FAQ about the WalkTHERE index as shown <a href="https://sydney.colouringaustralia.org/view/street-context/" target="">on Colouring Australia</a></h4>    
+        <h5>Why are the index values on the map so low?</h5>
+        <p>
+        The WalkTHERE index differs from common walkability indexes in several ways that tend to reduce the absolute score:
+        <ol>
+            <li>It doesn't consider just the closest destination, or a small fixed number, per category. Potentially infinite destinations are captured using a theory of diminishing returns to utility: the closest pub you can walk to is more useful than the second pub - but the second pub is also useful, as not all pubs are the same, and people have different preferences. The third pub is also (a bit less) useful, but the 50th pub is much less useful. The aim is to better capture variety and choice of destinations.</li>
+            <li>It uses a gradual distance weighting rather than a fixed threshold. This better reflects differing walking abilities and preferences. Not everyone can or will walk even 400m, while some people will walk much further. This distance weighting is based on research on how far different people regularly walk.</li>
+            <li>It includes employment opportunities. Clearly, someone who can walk to work benefits from a more walkable location, but employment is typically omitted from walkability metrics because researchers based in Australian or American cities assume that it is impossible for even a fraction of a city's residents to be able to walk to work. Yet in some European cities, a much higher proportion of residents can walk to work, owing to higher densities and different development patterns. Including employment also enables comparison between different modes of transport by using the same categories of destination between every mode.</li>
+            <li>It gives a fixed score, not a ranking. Some walkability indexes are based on z-scores, meaning they measure whether a place has better or worse walkability than the average of all places measured. This produces an attractive even spread of scores, but does not provide a stable basis for comparison over time, or for comparison between places.</li>
+        </ol>
+
+        Owing to these differences, the WalkTHERE index displayed has a very high ceiling: to achieve a result close to 100, a place must be so dense with walkable destinations that walking can get you to everything you would ever want to visit, every type of job you could want, for any person, even one who can't walk or wheel very far at all. Thus 100 does not necessarily represent a goal. The aim is to have a descriptive tool that is more useful for accurately measuring improvements, and comparing modes, than an index that has a lower ceiling.
+        </p>    
+        <p>
+        The converse problem is seen with some indexes (like WalkScore) that give very high scores to places that they judge 'very walkable' compared to much of the US or Australia. Often, these places still have a low walking mode share and few people able to live their lives primarily by walking. These indexes have a ceiling that is too low, rendering the index less useful for measuring ambitous improvements.
+
+        </p>
+
+        <h5>I looked up where I live and it should be more walkable than '50%', I walk to many places</h5>
+        <p>
+        No index can represent everyone's experiences exactly. For example, if you're looking at this index in order to find a walkable place to live, or if you're looking at it because you're interested in walkability, you probably enjoy and are able to walk more than the average person, so the distance decay weighting used would be too conservative for you.  The difference between scores for different places is still helpful: you'd prefer to live somewhere with a score of 50 score rather than 40.
+        </p>
+
+        <h5>Footnotes</h5>
+        <p id="footnote-1">
+            1. The idea that all such factors could be incorporated into access through conversion to generalised cost of travel is outlined in greater detail in my PhD thesis, section 2.3.2 (link will be added when available).
+               <a href="#footnote-1-ref" title="return to text">&#8617;</a>
+         </p>
+            <p id="footnote-2">
+                2. A recent paper <a href="https://doi.org/10.1016/j.trd.2024.104370" target="">calculating access to child-relevant destinations</a>.
+                <a href="#footnote-2-ref" title="return to text">&#8617;</a>
+
+    </div>
+
+</body>
+
+</html>
